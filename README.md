@@ -43,8 +43,8 @@ E' possibile usare qualsiasi libreria di terze parti per risolvere l'attività, 
 
 ## Pro tips
 Saranno apprezzate (ma non necessarie) le seguenti funzionalità:
-- filtri di ricerca nella lista (lato client);
-- gestione routing;
+- filtri di ricerca nella lista (lato client); (Fatto)
+- gestione routing; (Fatto)
 - dettaglio dell'utente in una rotta specifica;
 - dettaglio del post in una rotta specifica oppure mostrata in sovrapposizione alla lista (ad esempio, come una modale);
 - funzionalità responsive (adattamento della view a diversi breakpoints);

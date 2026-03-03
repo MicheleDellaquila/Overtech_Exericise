@@ -25,7 +25,7 @@ export function PostItem({
   );
 
   return (
-    <article className="flex flex-col gap-4 md:flex-row md:gap-6 md:items-center py-8 border-b border-border/30 no-underline text-inherit">
+    <article className="flex flex-col gap-4 md:flex-row md:gap-6 md:items-center py-6 border-b border-border/30 no-underline text-inherit">
       <Avatar>{avatar}</Avatar>
       <div className="flex flex-col gap-2">
         <h2 className="font-heading text-[2rem] leading-none mb-2 text-main font-semibold">
