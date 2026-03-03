@@ -20,7 +20,7 @@ Basarsi sulle immagini fornite nel file [anteprime.pdf](anteprime.pdf): in gener
 - il titolo in grassetto (2rem) colorato `post.title`;
 - il paragrafo (1rem) `post.body`;
 
-### Esercizio Moderato:
+### Esercizio Moderato: (Fatto)
 - mostrare la lista di post e con titolo e dettaglio e alcune informazioni dell'utente
     - la lista dei post deve essere recuperata mediante una chiamata all'endpoint fornito da jsonplaceholder: https://jsonplaceholder.typicode.com/posts;
     - anche la lista degli users deve essere recuperata mediante una chiamata all'endpoint fornito da jsonplaceholder: https://jsonplaceholder.typicode.com/users;

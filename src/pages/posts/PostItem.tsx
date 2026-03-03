@@ -1,15 +1,40 @@
+import { Loading } from "@/components/ui/Loading";
+import { Avatar } from "@/containers/Avatar";
 import type { Post } from "@/interfaces/post.interface";
+import type { User } from "@/interfaces/user.interface";
 
-type PostItemProps = Pick<Post, "title" | "body">;
-export function PostItem({ title, body }: PostItemProps) {
+type PostItemProps = Pick<Post, "title"> &
+  Pick<User, "username" | "name"> & { isUsersLoading: boolean };
+
+const getInitials = (name: string) => {
+  const names = name.split(" ");
+  const initials = names.map((n) => n.charAt(0).toUpperCase()).join("");
+  return initials;
+};
+
+export function PostItem({
+  title,
+  username,
+  name,
+  isUsersLoading,
+}: PostItemProps) {
+  const avatar = isUsersLoading ? (
+    <Loading size="loading-md" />
+  ) : (
+    <p className="text-2xl font-semibold leading-none">{getInitials(name)}</p>
+  );
+
   return (
-    <article className="flex gap-8 items-center py-8 border-b border-border/30 cursor-pointer no-underline text-inherit">
-      <div className="shrink-0 w-12.5 h-12.5 bg-red-600 " />
+    <article className="flex flex-col gap-4 md:flex-row md:gap-6 md:items-center py-8 border-b border-border/30 no-underline text-inherit">
+      <Avatar>{avatar}</Avatar>
       <div className="flex flex-col gap-2">
         <h2 className="font-heading text-[2rem] leading-none mb-2 text-main font-semibold">
           {title}
         </h2>
-        <p className="text-base text-muted line-clamp-2">{body}</p>
+        <p className="text-muted text-[0.75rem]">
+          Pubblicato da:{" "}
+          {isUsersLoading ? <Loading variant="loading-dots" /> : username}
+        </p>
       </div>
     </article>
   );
