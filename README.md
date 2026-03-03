@@ -12,7 +12,7 @@ Realizzare una piccola applicazione che mostri una lista di Post e il dettaglio 
 ## Design
 Basarsi sulle immagini fornite nel file [anteprime.pdf](anteprime.pdf): in generale l'esercizio vuole dare al candidato la possibilità di mettere in risalto le sue conoscenze di stile e anche le sue capacità creative. La grafica si può sicuramente migliorare, ma le anteprime grafiche rappresentano il minimo indispensabile.
 
-### Esercizio Base:
+### Esercizio Base: (Fatto)
 - mostrare la lista di post e con titolo e dettaglio
   - la lista può essere recuperata dal file [`mock-data/posts.mock.ts`](mock-data/posts.mock.ts) o mediante una chiamata all'endpoint fornito da jsonplaceholder: https://jsonplaceholder.typicode.com/posts
 - ogni elemento della lista è separato da una linea (di colore `#eeeeee`);

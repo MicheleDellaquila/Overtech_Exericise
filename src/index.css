@@ -7,9 +7,11 @@
 
 @theme {
     --color-bg: #0c0c0b;
+    --color-hover-bg: #1a1916;
     --color-border: #242320;
-    --color-text: #e8e4dc;
-    --color-primary: #e8b84a;
+    --color-main: #e8e4dc;
+    --color-muted: #6b6760;
+    --color-accent: #e8b84a;
 
     /* font-family */
     --ff-heading: "Fraunces", serif;
@@ -17,13 +19,26 @@
 }
 
 @layer base {
+    :root {
+        --color-bg: #0c0c0b;
+        --color-hover-bg: #1a1916;
+        --color-border: #eeeeee;
+        --color-main: #e8e4dc;
+        --color-muted: #6b6760;
+        --color-accent: #e8b84a;
+
+        /* font-family */
+        --ff-heading: "Fraunces", serif;
+        --ff-text: "Epilogue", sans-serif;
+    }
+
     html {
         font-family: var(--ff-text);
     }
 
     body {
         background: var(--color-bg);
-        color: var(--color-text);
+        color: var(--color-main);
         min-height: 100vh;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
