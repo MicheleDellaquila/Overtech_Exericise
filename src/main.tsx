@@ -8,4 +8,4 @@ const withStrictMode = (comp: JSX.Element) => {
   return isDevEnv ? <StrictMode>{comp}</StrictMode> : comp;
 };
 
-createRoot(document.getElementById("root")!).render(withStrictMode(App()));
+createRoot(document.getElementById("root")!).render(withStrictMode(<App />));

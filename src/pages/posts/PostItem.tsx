@@ -1,8 +1,6 @@
-interface PostItemProps {
-  title: string;
-  body: string;
-}
+import type { Post } from "../../interfaces/post.interface";
 
+type PostItemProps = Pick<Post, "title" | "body">;
 export function PostItem({ title, body }: PostItemProps) {
   return (
     <article className="flex gap-8 items-center py-8 border-b border-border/30 cursor-pointer no-underline text-inherit">
