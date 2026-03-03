@@ -6,7 +6,7 @@ import useGetPosts from "./hooks/useGetPosts";
 import useGetUsers from "./hooks/useGetUsers";
 import type { User } from "@/interfaces/user.interface";
 import { ErrorMessage } from "@/containers/ErrorMessage";
-import { SearchBar } from "@/containers/searchbar/SearchBar";
+import { SearchBar } from "@/containers/SearchBar";
 import useFilteredPosts from "./hooks/useFilteredPosts";
 
 export function Posts() {
@@ -33,6 +33,7 @@ export function Posts() {
         <PostItem
           key={post.id}
           title={post.title}
+          userId={user?.id}
           name={user?.name ?? "Unknown"}
           username={user?.username ?? "Anonymous"}
           isUsersLoading={isUsersLoading}
