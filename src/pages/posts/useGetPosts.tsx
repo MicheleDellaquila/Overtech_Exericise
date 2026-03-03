@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import type { Post } from "../../interfaces/post.interface";
+import type { Post } from "@/interfaces/post.interface";
 
 const fetchPosts = async (): Promise<Post[]> => {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");

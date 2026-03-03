@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import { Posts } from "../pages/posts/Posts";
+import { Posts } from "@/pages/posts/Posts";
 
 export const router = createBrowserRouter([
   {

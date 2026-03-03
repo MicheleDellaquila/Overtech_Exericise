@@ -1,5 +1,5 @@
-import { Loading } from "../../components/ui/loading";
-import { Header } from "../../containers/header";
+import { Loading } from "@/components/ui/loading";
+import { Header } from "@/containers/header";
 import { PostItem } from "./PostItem";
 import useGetPosts from "./useGetPosts";
 

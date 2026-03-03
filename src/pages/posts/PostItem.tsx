@@ -1,4 +1,4 @@
-import type { Post } from "../../interfaces/post.interface";
+import type { Post } from "@/interfaces/post.interface";
 
 type PostItemProps = Pick<Post, "title" | "body">;
 export function PostItem({ title, body }: PostItemProps) {
