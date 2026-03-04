@@ -1,12 +1,12 @@
 import { useMemo, useState } from "react";
 import { Loading } from "@/components/ui/Loading";
-import { Header } from "@/containers/Header";
+import { Header } from "@/pages/posts/Header";
 import { PostItem } from "./PostItem";
 import useGetPosts from "./hooks/useGetPosts";
 import useGetUsers from "./hooks/useGetUsers";
 import type { User } from "@/interfaces/user.interface";
 import { ErrorMessage } from "@/containers/ErrorMessage";
-import { SearchBar } from "@/containers/SearchBar";
+import { SearchBar } from "@/pages/posts/SearchBar";
 import useFilteredPosts from "./hooks/useFilteredPosts";
 
 export function Posts() {
@@ -50,10 +50,10 @@ export function Posts() {
         <h2 className="ff-heading text-muted py-4 uppercase tracking-wider">
           Ultimi articoli
         </h2>
-        <article className="pt-6">
+        <section className="pt-6">
           <SearchBar searchTerm={searchTerm} onChange={setSearchTerm} />
-          {renderContent()}
-        </article>
+          <div className="mt-4">{renderContent()}</div>
+        </section>
       </section>
     </main>
   );

@@ -2,13 +2,17 @@ import { Avatar } from "@/containers/Avatar";
 import getInitials from "@/utils/getInitials";
 import { Loading } from "./ui/Loading";
 
-interface UserNameProps {
+interface UserProfileProps {
   name: string;
   username: string;
-  isLoading: boolean;
+  isLoading?: boolean;
 }
 
-export function UserName({ name, username, isLoading }: UserNameProps) {
+export function UserProfile({
+  name,
+  username,
+  isLoading = false,
+}: UserProfileProps) {
   const initials = getInitials(name);
 
   return (

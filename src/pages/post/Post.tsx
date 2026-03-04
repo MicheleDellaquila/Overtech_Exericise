@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import { ErrorMessage } from "@/containers/ErrorMessage";
 import { GoBack } from "@/containers/GoBack";
 import useGetPost from "./useGetPost";
-import useGetUser from "@/pages/user/useGetUser";
-import { UserName } from "@/components/UserName";
+import useGetUser from "@/hook/useGetUser";
+import { UserProfile } from "@/components/UserProfile";
 import { PageLoading } from "@/containers/PageLoading";
 
 export function Post() {
@@ -31,7 +31,7 @@ export function Post() {
         <div className="mb-12">
           <GoBack />
         </div>
-        <UserName
+        <UserProfile
           name={user?.name ?? "Utente sconosciuto"}
           username={user?.username ?? "anonimo"}
           isLoading={isUserLoading}
