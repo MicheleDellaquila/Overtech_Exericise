@@ -45,12 +45,12 @@ E' possibile usare qualsiasi libreria di terze parti per risolvere l'attività, 
 Saranno apprezzate (ma non necessarie) le seguenti funzionalità:
 - filtri di ricerca nella lista (lato client); (Fatto)
 - gestione routing; (Fatto)
-- dettaglio dell'utente in una rotta specifica;
-- dettaglio del post in una rotta specifica oppure mostrata in sovrapposizione alla lista (ad esempio, come una modale);
-- funzionalità responsive (adattamento della view a diversi breakpoints);
+- dettaglio dell'utente in una rotta specifica; (Fatto)
+- dettaglio del post in una rotta specifica oppure mostrata in sovrapposizione alla lista (ad esempio, come una modale); (Fatto)
+- funzionalità responsive (adattamento della view a diversi breakpoints); (Fatto)
 - funzionalità di cambio tema (ad esempio rendere variabile il colore "primario" di quadrato/testo/link etc...);
 - animazioni o transizioni;
 - gestione della lista in doppia visualizzazione (semplice lista e card affiancate);
-- organizzazione pulita e chiara della struttura del progetto (modules, services, directives...).
+- organizzazione pulita e chiara della struttura del progetto (modules, services, directives...). (Fatto)
 
 ##### Buon lavoro!
