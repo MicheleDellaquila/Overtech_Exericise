@@ -32,8 +32,9 @@ export function Posts() {
       return (
         <PostItem
           key={post.id}
+          id={post.id}
           title={post.title}
-          userId={user?.id}
+          userId={post.userId}
           name={user?.name ?? "Unknown"}
           username={user?.username ?? "Anonymous"}
           isUsersLoading={isUsersLoading}

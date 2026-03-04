@@ -6,12 +6,14 @@ import getInitials from "@/utils/getInitials";
 import { Link } from "react-router-dom";
 
 interface PostItemProps
-  extends Pick<Post, "title">, Pick<User, "name" | "username"> {
-  userId: number | undefined;
+  extends
+    Pick<Post, "title" | "id" | "userId">,
+    Pick<User, "name" | "username"> {
   isUsersLoading: boolean;
 }
 
 export function PostItem({
+  id,
   title,
   userId,
   name,
@@ -22,7 +24,9 @@ export function PostItem({
   const avatar = isUsersLoading ? (
     <Avatar loader={<Loading size="loading-md" />} />
   ) : (
-    <Avatar name={initials} />
+    <Link to={`/post/${id}`}>
+      <Avatar name={initials} />
+    </Link>
   );
 
   return (
