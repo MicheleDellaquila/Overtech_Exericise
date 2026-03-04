@@ -13,9 +13,7 @@ export function Post() {
     isLoading: isPostLoading,
     isError: isPostError,
   } = useGetPost(postId);
-  const { data: user, isLoading: isUserLoading } = useGetUser(
-    post?.userId?.toString(),
-  );
+  const { data: user, isLoading: isUserLoading } = useGetUser(post?.userId);
 
   if (isPostLoading) return <PageLoading />;
   if (isPostError || !post)

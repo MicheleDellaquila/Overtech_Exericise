@@ -9,11 +9,12 @@ const fetchUser = async (userId: string): Promise<User> => {
   return response.json();
 };
 
-const useGetUser = (userId: string | undefined) => {
+const useGetUser = (userId: number | string | undefined) => {
+  const id = userId != null ? String(userId) : undefined;
   const { data, isLoading, isError } = useQuery<User>({
     queryKey: ["user", userId],
-    queryFn: () => fetchUser(userId!),
-    enabled: !!userId,
+    queryFn: () => fetchUser(id!),
+    enabled: !!id,
   });
 
   return { data, isLoading, isError };
