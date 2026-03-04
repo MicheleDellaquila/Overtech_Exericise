@@ -18,7 +18,7 @@ export const SearchBar = memo(function SearchBar({
         id="search"
         name="search"
         placeholder="Cerca per titolo o autore del post"
-        className="input input-md placeholder-shown:text-muted not-placeholder-shown:text-black focus:outline-none focus:ring-2 focus:text-accent"
+        className="input input-md placeholder-shown:text-muted not-placeholder-shown:text-black focus:outline-none focus:ring-2 focus:text-muted"
         onChange={(e) => onChange(e.target.value)}
         value={searchTerm}
       />
