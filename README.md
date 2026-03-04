@@ -50,7 +50,7 @@ Saranno apprezzate (ma non necessarie) le seguenti funzionalità:
 - funzionalità responsive (adattamento della view a diversi breakpoints); (Fatto)
 - funzionalità di cambio tema (ad esempio rendere variabile il colore "primario" di quadrato/testo/link etc...);
 - animazioni o transizioni;
-- gestione della lista in doppia visualizzazione (semplice lista e card affiancate);
+- gestione della lista in doppia visualizzazione (semplice lista e card affiancate); (Fatto)
 - organizzazione pulita e chiara della struttura del progetto (modules, services, directives...). (Fatto)
 
 ##### Buon lavoro!

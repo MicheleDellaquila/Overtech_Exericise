@@ -5,21 +5,21 @@ import type { User } from "@/interfaces/user.interface";
 import getInitials from "@/utils/getInitials";
 import { Link } from "react-router-dom";
 
-interface PostItemProps
+interface ListPostItemProps
   extends
     Pick<Post, "title" | "id" | "userId">,
     Pick<User, "name" | "username"> {
   isUsersLoading: boolean;
 }
 
-export function PostItem({
+export function ListPostItem({
   id,
   title,
   userId,
   name,
   username,
   isUsersLoading,
-}: PostItemProps) {
+}: ListPostItemProps) {
   const initials = getInitials(name);
   const avatar = isUsersLoading ? (
     <Avatar loader={<Loading size="loading-md" />} />
