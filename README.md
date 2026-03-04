@@ -49,7 +49,7 @@ Saranno apprezzate (ma non necessarie) le seguenti funzionalità:
 - dettaglio del post in una rotta specifica oppure mostrata in sovrapposizione alla lista (ad esempio, come una modale); (Fatto)
 - funzionalità responsive (adattamento della view a diversi breakpoints); (Fatto)
 - funzionalità di cambio tema (ad esempio rendere variabile il colore "primario" di quadrato/testo/link etc...);
-- animazioni o transizioni;
+- animazioni o transizioni; (Fatto)
 - gestione della lista in doppia visualizzazione (semplice lista e card affiancate); (Fatto)
 - organizzazione pulita e chiara della struttura del progetto (modules, services, directives...). (Fatto)
 

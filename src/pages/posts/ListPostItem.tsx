@@ -24,13 +24,16 @@ export function ListPostItem({
   const avatar = isUsersLoading ? (
     <Avatar loader={<Loading size="loading-md" />} />
   ) : (
-    <Link to={`/post/${id}`}>
+    <Link
+      className="hover:scale-[1.04] transition-transform"
+      to={`/post/${id}`}
+    >
       <Avatar name={initials} />
     </Link>
   );
 
   return (
-    <article className="flex flex-col gap-4 md:flex-row md:gap-6 md:items-center py-6 border-b border-border/30 no-underline text-inherit">
+    <article className="flex flex-col gap-4 md:flex-row md:gap-6 md:items-center py-6 border-b border-border/30">
       {avatar}
       <div className="flex flex-col gap-2">
         <h2 className="font-heading text-[2rem] leading-none mb-2 text-main font-semibold">
@@ -41,7 +44,10 @@ export function ListPostItem({
           {isUsersLoading ? (
             <Loading variant="loading-dots" />
           ) : (
-            <Link className="underline text-accent" to={`/user/${userId}`}>
+            <Link
+              className="underline text-accent hover:font-bold transition-all"
+              to={`/user/${userId}`}
+            >
               {username}
             </Link>
           )}

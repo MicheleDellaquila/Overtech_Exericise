@@ -30,25 +30,26 @@ export function CardsPostItem({
   );
 
   return (
-    <div className="card border bg-main rounded-md p-4 transition-transform hover:scale-[1.02]">
-      <article className="flex flex-col gap-4 text-inherit">
-        {avatar}
-        <div className="flex flex-col gap-2">
-          <h2 className="font-heading text-[2rem] leading-none mb-2 text-muted font-semibold">
-            {title}
-          </h2>
-          <p className="text-muted text-[0.75rem]">
-            Pubblicato da:{" "}
-            {isUsersLoading ? (
-              <Loading variant="loading-dots" />
-            ) : (
-              <Link className="underline text-accent" to={`/user/${userId}`}>
-                {username}
-              </Link>
-            )}
-          </p>
-        </div>
-      </article>
-    </div>
+    <article className="card border bg-main rounded-md p-4">
+      <div className="mb-2">{avatar}</div>
+      <div className="flex flex-col gap-2">
+        <h2 className="font-heading text-[2rem] leading-none mb-2 text-muted font-semibold">
+          {title}
+        </h2>
+        <p className="text-muted text-[0.75rem]">
+          Pubblicato da:{" "}
+          {isUsersLoading ? (
+            <Loading variant="loading-dots" />
+          ) : (
+            <Link
+              className="underline text-accent hover:font-bold transition-all"
+              to={`/user/${userId}`}
+            >
+              {username}
+            </Link>
+          )}
+        </p>
+      </div>
+    </article>
   );
 }
