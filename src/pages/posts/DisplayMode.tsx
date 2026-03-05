@@ -1,9 +1,14 @@
 import { Rows4, Columns4 } from "lucide-react";
 import useSharedPreferences from "@/store/useSharedPreferences";
+import { useShallow } from "zustand/shallow";
 
 export function DisplayMode() {
-  const layoutView = useSharedPreferences((s) => s.layoutView);
-  const changeLayoutView = useSharedPreferences((s) => s.changeLayoutView);
+  const { layoutView, changeLayoutView } = useSharedPreferences(
+    useShallow((state) => ({
+      layoutView: state.layoutView,
+      changeLayoutView: state.changeLayoutView,
+    })),
+  );
 
   return (
     <div className="join bg-main/15 rounded-md p-2">

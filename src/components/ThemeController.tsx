@@ -1,22 +1,27 @@
+import useSharedPreferences from "@/store/useSharedPreferences";
 import { Sun, Moon } from "lucide-react";
-import { useState } from "react";
+import { useEffect } from "react";
+import { useShallow } from "zustand/shallow";
 
 export function ThemeController() {
-  const [theme, setTheme] = useState("dark");
+  const { theme, changeTheme } = useSharedPreferences(
+    useShallow((state) => ({
+      theme: state.theme,
+      changeTheme: state.changeTheme,
+    })),
+  );
 
-  const handleChangeTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   return (
     <label className="swap swap-rotate group">
       <input
         type="checkbox"
         className="theme-controller"
-        value={theme}
-        onChange={handleChangeTheme}
+        checked={theme === "light"}
+        onChange={changeTheme}
       />
       <Moon className="swap-off h-6 w-6 fill-current transition-all duration-200 group-hover:scale-125 group-hover:text-accent" />
       <Sun className="swap-on h-6 w-6 fill-current transition-all duration-200 group-hover:scale-125 group-hover:text-accent" />
