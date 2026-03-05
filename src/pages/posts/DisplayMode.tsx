@@ -14,7 +14,7 @@ export function DisplayMode() {
       >
         <Rows4
           size={24}
-          color={layoutView === "list" ? "#e8b84a" : "#e8e4dc"}
+          className={`${layoutView === "list" ? "text-accent" : "text-muted"}`}
         />
       </button>
       <button
@@ -24,7 +24,7 @@ export function DisplayMode() {
       >
         <Columns4
           size={24}
-          color={layoutView === "cards" ? "#e8b84a" : "#e8e4dc"}
+          className={`${layoutView === "cards" ? "text-accent" : "text-muted"}`}
         />
       </button>
     </div>

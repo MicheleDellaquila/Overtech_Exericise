@@ -1,36 +1,51 @@
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+    themes:
+        dark --default;
+        light,
+    root: ":root";
+    include:;
+    exclude:;
+    prefix:;
+    logs: true;
+}
 
 @utility container {
     margin-inline: auto;
 }
 
 @theme {
-    --color-bg: #0c0c0b;
-    --color-hover-bg: #1a1916;
-    --color-border: #eeeeee;
-    --color-main: #e8e4dc;
-    --color-muted: #6b6760;
-    --color-accent: #e8b84a;
+    --color-bg: var(--color-bg);
+    --color-hover-bg: var(--color-hover-bg);
+    --color-border: var(--color-border);
+    --color-main: var(--color-main);
+    --color-muted: var(--color-muted);
+    --color-accent: var(--color-accent);
 
-    /* font-family */
     --ff-heading: "Fraunces", serif;
     --ff-text: "Epilogue", sans-serif;
 }
 
 @layer base {
-    :root {
-        --color-bg: #0c0c0b;
-        --color-hover-bg: #1a1916;
-        --color-border: #eeeeee;
-        --color-main: #e8e4dc;
-        --color-muted: #6b6760;
-        --color-accent: #e8b84a;
+    :root,
+        [data-theme="dark"] {
+            --color-bg: #0c0c0b;
+            --color-hover-bg: #1a1916;
+            --color-border: #eeeeee;
+            --color-main: #e8e4dc;
+            --color-muted: #6b6760;
+            --color-accent: #e8b84a;
+        }
 
-        /* font-family */
-        --ff-heading: "Fraunces", serif;
-        --ff-text: "Epilogue", sans-serif;
-    }
+        [data-theme="light"] {
+            --color-bg: #f5f3ef;
+            --color-hover-bg: #e8e4dc;
+            --color-border: #2c2a26;
+            --color-main: #1a1916;
+            --color-muted: #8a857e;
+            --color-accent: #c4922a;
+        }
 
     html {
         font-family: var(--ff-text);
